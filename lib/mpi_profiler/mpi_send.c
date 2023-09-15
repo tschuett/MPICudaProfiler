@@ -1,4 +1,4 @@
-
+#include <mpi.h>
 
 int MPI_Send(const void* buffer, int count, MPI_Datatype datatype,
              int dest, int tag, MPI_Comm comm)

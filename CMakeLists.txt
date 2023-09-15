@@ -17,10 +17,10 @@ if(COMPILER_SUPPORTS_PROC_STAT_REPORT)
 endif()
 
 # for cuPTI
-#find_package(CUDA required)
+#find_package(CUDA REQUIRED)
 
 # for mpi
-#find_package(MPI required)
+find_package(MPI REQUIRED)
 
 
 

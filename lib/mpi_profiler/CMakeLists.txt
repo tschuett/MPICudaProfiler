@@ -15,6 +15,7 @@
 #   return result;
 #}
 
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I${MPI_C_HEADER_DIR}")
 
 add_library(mpi_profiler
            mpi_send.c
