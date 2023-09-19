@@ -1,15 +1,17 @@
 
-const MIDR_IMPLEMENTOR_SHIFT: u64 = 24;
-const MIDR_VARIANT_SHIFT: u64 = 24;
-const MIDR_ARCHITECTURE_SHIFT: u64 = 24;
-const MIDR_PART_NUM_SHIFT: u64 = 4;
-const MIDR_REVISION_SHIFT: u64 = 0;
+#include <cstdint>
 
-const MIDR_REVISION_MASK: u64 = 0xf;
-const MIDR_PART_NUM_MASK: u64 = 0xfff << MIDR_PART_NUM_SHIFT;
-const MIDR_ARCHITECTURE_MASK: u64 = 0xf << MIDR_ARCHITECTURE_SHIFT;
-const MIDR_VARIANT_MASK: u64 = 0xf << MIDR_VARIANT_SHIFT;
-const MIDR_IMPLEMENTOR_MASK: u64 = 0xff << MIDR_IMPLEMENTOR_SHIFT;
+const uint64_t MIDR_IMPLEMENTOR_SHIFT = 24;
+const uint64_t MIDR_VARIANT_SHIFT = 24;
+const uint64_t MIDR_ARCHITECTURE_SHIFT = 24;
+const uint64_t MIDR_PART_NUM_SHIFT = 4;
+const uint64_t MIDR_REVISION_SHIFT = 0;
+
+const uint64_t MIDR_REVISION_MASK = 0xf;
+const uint64_t MIDR_PART_NUM_MASK = 0xfff << MIDR_PART_NUM_SHIFT;
+const uint64_t MIDR_ARCHITECTURE_MASK = 0xf << MIDR_ARCHITECTURE_SHIFT;
+const uint64_t MIDR_VARIANT_MASK = 0xf << MIDR_VARIANT_SHIFT;
+const uint64_t MIDR_IMPLEMENTOR_MASK = 0xff << MIDR_IMPLEMENTOR_SHIFT;
 
 uint64_t extract(uint64_t midr, uint64_t shift, uint64_t mask) {
   return (midr >> shift) & mask;

@@ -1,6 +1,8 @@
 add_library(profiler
-           Slurm.c
+           Slurm.cpp
            CPU.cpp
+#           NVML.cpp
+           JSON.cpp
            )
 
 
