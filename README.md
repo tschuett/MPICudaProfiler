@@ -22,3 +22,9 @@ https://docs.nvidia.com/cupti/r_main.html#r_main
  * CUDA
  * cuPTI
  * CMake
+
+
+
+https://ieeexplore.ieee.org/document/6844459
+A Top-Down method for performance analysis and counters architecture
+Ahmad Yasin, Intel
