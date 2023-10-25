@@ -16,8 +16,8 @@ if(COMPILER_SUPPORTS_PROC_STAT_REPORT)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fproc-stat-report=abc")
 endif()
 
-# for cuPTI
-#find_package(CUDAToolkit REQUIRED)
+# for cuPTI # REQUIRED
+find_package(CUDAToolkit)
 
 # for mpi
 find_package(MPI REQUIRED)

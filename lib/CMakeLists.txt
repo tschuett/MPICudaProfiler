@@ -12,3 +12,6 @@ target_include_directories(profiler PRIVATE  ../include)
 
 add_subdirectory(mpi_profiler)
 
+
+if (CUDAToolkit_FOUND)
+endif()
