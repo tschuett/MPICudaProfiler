@@ -3,11 +3,30 @@
 #include <nvml.h>
 #include <stdlib.h>
 
-
+#include <cstdint>
 #include <string>
-#inlude < string_view>
+#include <string_view>
+#include <vector>
 
-void parseCUDAVisibleDevices(std::string_view VisibleDevices) {
+static std::vector<uint64_t> parseDigits(std::string_view VisibleDevices) {
+  std::vector<uint64_t> digits;
+  if (VisibleDevices.empty())
+    return digits;
+  if (not std::isdigit(VisibleDevices.front())
+    return digits;
+
+  if (std::isdigit(VisibleDevices.front())) {
+    // sneak until , or empty
+    uint64_t digit;
+    while (not VisibleDevices.empty() and
+           std::isdigit(VisibleDevices.front())) {
+      
+      remove_prefix(1);
+    }
+  }
+}
+
+static void parseCUDAVisibleDevices(std::string_view VisibleDevices) {
   if (VisibleDevices.starts_with("GPU-")) {
   } else if (VisibleDevices.starts_with("MIG-GPU-")) {
   } else {
