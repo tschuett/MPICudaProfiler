@@ -19,6 +19,10 @@ endif()
 # for cuPTI # REQUIRED
 find_package(CUDAToolkit)
 
+if(CUDAToolkit_FOUND)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_CUDA")
+endif()
+
 # for mpi
 find_package(MPI REQUIRED)
 
