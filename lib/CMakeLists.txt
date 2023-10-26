@@ -13,6 +13,7 @@ add_library(profiler
            NVML.cpp
            CUPTI.cpp
            JSON.cpp
+           Entry.cpp
            )
 
 target_link_libraries(profiler
@@ -26,6 +27,7 @@ add_library(profiler
            Slurm.cpp
            CPU.cpp
            JSON.cpp
+           Entry.cpp
            )
 
 target_link_libraries(profiler
