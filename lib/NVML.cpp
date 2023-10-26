@@ -2,8 +2,14 @@
 #include <stdlib.h>
 
 #include <string>
+#inlude < string_view>
 
-void parseCUDAVisibleDevices() {
+void parseCUDAVisibleDevices(std::string_view VisibleDevices) {
+  if (VisibleDevices.starts_with("GPU-")) {
+  } else if (VisibleDevices.starts_with("MIG-GPU-")) {
+  } else {
+    // digits
+  }
 }
 
 void foo() {
