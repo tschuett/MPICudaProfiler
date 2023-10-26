@@ -3,6 +3,9 @@
 
 #include <string>
 
+void parseCUDAVisibleDevices() {
+}
+
 void foo() {
   unsigned int count = 0;
   int cudaDriverVersion = 0;
