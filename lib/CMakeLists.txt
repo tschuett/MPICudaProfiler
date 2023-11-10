@@ -20,7 +20,9 @@ target_link_libraries(profiler
         PRIVATE
         mpi_profiler
         CUDA::cuda_driver
-        CUDA::cupti_static)
+        CUDA::cupti_static
+        CUDA::nvml
+        )
 else()
 
 add_library(profiler

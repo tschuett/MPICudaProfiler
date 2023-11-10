@@ -1,4 +1,5 @@
 #include "NVML.h"
+#include "JSON.h"
 
 #include <nvml.h>
 #include <stdlib.h>
@@ -20,7 +21,7 @@ static std::vector<uint64_t> parseDigits(std::string_view VisibleDevices) {
     uint64_t digit;
     while (not VisibleDevices.empty() and
            std::isdigit(VisibleDevices.front())) {
-      
+
       remove_prefix(1);
     }
   }
@@ -34,7 +35,7 @@ static void parseCUDAVisibleDevices(std::string_view VisibleDevices) {
   }
 }
 
-void foo() {
+void analyzeDevices() {
   unsigned int count = 0;
   int cudaDriverVersion = 0;
   nvmlReturn_t ret;
