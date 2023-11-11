@@ -1,12 +1,11 @@
 #include "Entry.h"
 
-#ifdef HAVE_CUDA
-#include NVML.h"
-#endif
+#include NVML.h "
 
 void startProfiler() {
+#idef HAVE_CUDA
+  analyzeDevices();
+#endif
 }
 
-
-void stopProfiler() {
-}
+void stopProfiler() {}
