@@ -20,7 +20,10 @@ set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I${MPI_C_HEADER_DIR}")
 add_library(mpi_profiler
            mpi_init.c
            mpi_finalize.c
+           mpi_recv.c
            mpi_send.c
+           mpi_allreduce_init.c
+           mpi_start.c
            )
 
 

@@ -30,6 +30,8 @@ class Number : public Value {
   std::variant<int64_t, uint64_t, double> value;
 
 public:
+  Number(uint64_t Num) : value(Num){};
+
   void dump(std::string &stream) override;
 };
 
