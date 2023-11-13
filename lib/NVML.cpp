@@ -27,6 +27,7 @@ static std::vector<uint64_t> parseDigits(std::string_view VisibleDevices) {
   }
 }
 
+
 static void parseCUDAVisibleDevices(std::string_view VisibleDevices) {
   if (VisibleDevices.starts_with("GPU-")) {
   } else if (VisibleDevices.starts_with("MIG-GPU-")) {

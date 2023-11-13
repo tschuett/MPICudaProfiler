@@ -14,6 +14,7 @@ add_library(profiler
            CUPTI.cpp
            JSON.cpp
            Entry.cpp
+           Parser.cpp
            )
 
 target_link_libraries(profiler
@@ -30,6 +31,7 @@ add_library(profiler
            CPU.cpp
            JSON.cpp
            Entry.cpp
+           Parser.cpp
            )
 
 target_link_libraries(profiler
