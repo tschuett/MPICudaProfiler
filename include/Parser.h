@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 class CUDAVisibleDevicesParser {
   std::string VisibleDevices;
@@ -12,7 +13,7 @@ public:
   void parse();
 
 private:
-  void parseDigits();
+  std::vector<int> parseDigits();
   void parseMIG();
   void parseGPU();
 };

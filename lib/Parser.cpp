@@ -14,14 +14,14 @@ void CUDAVisibleDevicesParser::parse() {
   parseDigits();
 }
 
-void CUDAVisibleDevicesParser::parseDigits() {
+std::vector<int> CUDAVisibleDevicesParser::parseDigits() {
   std::string_view data = VisibleDevices;
   std::vector<int> ids;
 
   std::string_view::size_type pos = data.find_first_of(',');
 
   while (pos != std::string_view::npos) {
-    std::string_view digit = data.substr(0, npos - 1);
+    std::string_view digit = data.substr(0, pos - 1);
 
     int id = std::stoi(digit);
     ids.push_back(id);
@@ -31,4 +31,7 @@ void CUDAVisibleDevicesParser::parseDigits() {
 
     pos = data.find_first_of(',');
   }
+
+  return ids;
+  
 }
